@@ -677,7 +677,7 @@ a:focus, a:hover, a:active {
   z-index: 100;
   border-bottom: 1px #ccd0d6 solid; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   .header_links {
     position: fixed;
     top: 71px;
@@ -957,7 +957,7 @@ header a:focus, header a:hover, header a:active, .header_links-active {
   header a:focus, header a:hover, header a:active, .header_links-active {
     color: #FAFBFF; }
   .header_link {
-    color: #d8d9dd; }
+    color: #e9eaee; }
   .nav_expand {
     display: none; }
   body {
