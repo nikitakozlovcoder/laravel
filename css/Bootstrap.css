@@ -655,7 +655,11 @@ a {
   position: relative; }
 
 .nav_expand {
-  cursor: pointer; }
+  cursor: pointer;
+  height: 15px; }
+
+.nav_expand path {
+  fill: white; }
 
 a {
   font-family: Hind, sans-serif;
@@ -738,6 +742,9 @@ header a:focus, header a:hover, header a:active, .header_links-active {
 
 .nav_light .header_link {
   color: black; }
+
+.nav_light .nav_expand path {
+  fill: black; }
 
 .features {
   padding-top: 100px;
@@ -846,6 +853,10 @@ header a:focus, header a:hover, header a:active, .header_links-active {
   background: #2c2f34;
   opacity: 0.7; }
 
+.footer_col_info_text-accent {
+  color: #54bfd0;
+  font-weight: bold; }
+
 .footer_submit {
   background: #50a6b7;
   color: white;
@@ -854,6 +865,13 @@ header a:focus, header a:hover, header a:active, .header_links-active {
 
 .footer_submit:hover {
   background-color: #54bfd0; }
+
+.map {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin-bottom: 10px;
+  border: 0; }
 
 .products-grid {
   position: relative;
@@ -868,6 +886,9 @@ header a:focus, header a:hover, header a:active, .header_links-active {
   display: inline-block;
   font-weight: bold;
   color: #54576a; }
+
+.product-grid_item_title:hover {
+  text-decoration: underline; }
 
 .product-grid_item_wrap img {
   max-height: 100%;
@@ -917,12 +938,20 @@ header a:focus, header a:hover, header a:active, .header_links-active {
     flex-basis: calc(100% / 2); } }
 
 @media screen and (min-width: 500px) {
+  .map {
+    width: 300px;
+    height: 300px; }
+  .footer_col_info {
+    display: flex;
+    align-items: center; }
+  .footer_col_info > * {
+    padding: 5px; }
   .products_columns {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; }
+    flex-wrap: wrap; }
   .products_item {
-    flex-basis: 40%; }
+    flex-basis: 40%;
+    padding: 10px; }
   .products_item:first-child {
     flex-basis: 100%; }
   .features {
@@ -990,7 +1019,12 @@ header a:focus, header a:hover, header a:active, .header_links-active {
   .showcase_grid_item {
     transition: transform 0.1s linear; }
   .showcase_grid_item:hover {
-    transform: scale(1.4); } }
+    transform: scale(1.4); }
+  .footer_col_info {
+    display: block; }
+  .map {
+    width: 450px;
+    height: 325px; } }
 
 @media screen and (min-width: 1100px) {
   .product-grid_item {
