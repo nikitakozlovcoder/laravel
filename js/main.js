@@ -1,4 +1,4 @@
-
+var contact = document.getElementsByClassName('footer_form')[0];
 
 
 var expanded = true;
@@ -24,8 +24,31 @@ expandGrid.onclick = function () {
         }
 
     };
+console.log(contact);
+contact.onsubmit = function (e) {
+    e.preventDefault();
 
+    var inputName = document.getElementById('name');
+    var inputPhone = document.getElementById('phone');
+    var inputEmail = document.getElementById('email');
+    var inputBody = document.getElementById('body');
+    var formData = new FormData(document.forms.person);
 
+    // добавить к пересылке ещё пару ключ - значение
+    formData.append("name", inputName.value);
+    formData.append("phone", inputPhone.value);
+    formData.append("email", inputEmail.value);
+    formData.append("body", inputBody.value);
+
+    // отослать
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/mail");
+    xhr.send(formData);
+    inputName.value = "";
+    inputPhone.value = "";
+    inputEmail.value = "";
+    inputBody.value = "";
+};
 
 
 
