@@ -23,7 +23,7 @@ expandGrid.onclick = function () {
         expandGrid.style.padding = "15px";
         }
 
-    };
+    }; 
 
 
 
